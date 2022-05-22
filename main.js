@@ -21,11 +21,7 @@ $(".btn").on("click", (event)=>{
     ussserPattern.push(userChosenCollor);
     playSound(userChosenCollor);
     animationOfPress(userChosenCollor);
-    
-    //check last users input to check it with game pattern
-    // checkAnswer(ussserPattern.length - 1);
-    // console.log(ussserPattern.length - 1 + " I'm from click event")
-
+   
     checkUserAnswer(ussserPattern.length - 1);
 
 });
@@ -62,7 +58,7 @@ $("body").keypress( (el)=>{
       
 });
 
-//Check las input by user and in game patter + comparing a lenght
+//Check last input by user and in game patter + comparing a lenght
 const checkUserAnswer = (userAnswer) => {
 
     if(ussserPattern[userAnswer] === gamePattern[userAnswer]){
@@ -137,28 +133,5 @@ function Over (){
     level1 = 0;
     started = false;
 };
-
-
-
-
-
-
-
-/**
-const fizzbuzz = (n) => {
-    if(n % 5 === 0 && n % 3 === 0){
-        console.log('FizzBuzz')
-    }else if(n % 5 === 0){
-        console.log("Buzz");
-    }else if(n % 3 === 0){
-        console.log("Fizz")
-    }else console.log(n)
-};
-
-for(i = 1; i <= 100; i++){
-    fizzbuzz(i);
-};
-
-*/
 
 
